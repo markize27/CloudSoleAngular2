@@ -10,9 +10,9 @@ var AddressBookController = function($scope, $http){
 
     $scope.editMode = false;
     $scope.position = '';
-    setInterval(function() {
-        $http.get("https://boiling-dawn-93304.herokuapp.com/");
-    }, 300000); // every 5 minutes (300000)
+    // setInterval(function() {
+    //     $http.get("https://boiling-dawn-93304.herokuapp.com/");
+    // }, 300000); // every 5 minutes (300000)
     $scope.viewAllAddressBook = function(){
         $http.get('address/all.json').success(function(response){
             $scope.addressBooks = response;
